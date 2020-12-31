@@ -1,19 +1,21 @@
 import types from "../configs/types";
 
 const initialState = {
-  islogged: false,
+  usuario: { isLogged: false },
+  token: "",
 };
 
 const authReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case types.login:
       return {
-        islogged: true,
-        ...payload,
+        usuario: { isLogged: true, ...payload.usuario },
+        token: payload.token,
       };
     case types.logout:
       return {
-        islogged: false,
+        usuario: { isLogged: false },
+        token: "",
       };
 
     default:

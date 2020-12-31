@@ -1,5 +1,5 @@
-import { Col, Container, Form, Row, Button, FormGroup } from "react-bootstrap";
-import logo from "../assets/WhatsApp Image 2020-12-29 at 4.49.22 PM.jpeg";
+import logo from "../assets/global network.png";
+import { Formulario } from "../components/Login/Formulario";
 export const LoginView = () => {
   return (
     <div
@@ -49,26 +49,12 @@ export const LoginView = () => {
           className="d-flex flex-column justify-content-center align-items-center"
         >
           <div className="mb-3">
-            <img src={logo} style={{ width: "150px" }}></img>
+            <img src={logo} style={{ width: "150px" }} alt="logo" />
           </div>
           <div className="mb-4">
             <h2>Login</h2>
           </div>
-
-          <Form>
-            <Form.Group controlId="formBasicEmail">
-              <Form.Label>DNI</Form.Label>
-              <Form.Control type="text" placeholder="Enter email" />
-            </Form.Group>
-
-            <Form.Group controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
-            </Form.Group>
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
-          </Form>
+          <Formulario />
         </div>
       </div>
     </div>
